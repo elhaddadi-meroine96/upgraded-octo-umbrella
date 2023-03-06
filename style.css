@@ -1,3 +1,17 @@
+:root{
+  --clr-primary-600:hsl(0, 100%, 66%);
+
+  --clr-neutral-900: hsl(278, 68%, 11%);
+  --clr-neutral-500: hsl(279, 6%, 55%);
+  --clr-neutral-300: hsl(270, 3%, 87%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-base: 'Space Grotesk', sans-serif;
+  --fw-regular: 500;
+  --fs-body : 1.125rem;
+}
+
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -38,9 +52,135 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
   font: inherit;
 }
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 /*
   8. Avoid text overflows
 */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+
+/* general styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-900);
+  font-size: var(--fs-body);
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.flex-group{
+  display: flex;
+}
+
+/* form style */
+
+
+.card__form {
+  display: grid;
+  gap: 1.438rem;
+  width: 21.875rem;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(4,1fr);
+}
+
+.card__form-label {
+  text-transform: uppercase;
+  color: var(--clr-neutral-900);
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: .3rem;
+}
+
+.card__form-input {
+  padding: .5rem;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 6px;
+}
+
+.card__form-input[placeholder] {
+  color: var(--clr-neutral-500);
+}
+
+.card__form-number {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 span;
+}
+.card__form-name {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 span;
+}
+
+.input-my{
+  width: 4.375rem;
+  margin-inline: .5rem;
+  margin-left: 0;
+}
+
+.card__form-button {
+  display: flex;
+  flex-direction: column;
+  grid-column: 2 span;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-100);
+  border: 0;
+  border-radius: 0.5rem;
+  padding: .75em 1.5em;
+  height: 3.125rem;
+}
+
+
+.card__form-expdate-cvc{
+  display: flex;
+  grid-column: 2 span;
+  gap: 1rem;  
+}
+
+.card__form-expDate{
+display: flex;
+flex-direction: column;
+}
+
+.card__form-cvc {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-cvc{
+  width:100%;
 }
