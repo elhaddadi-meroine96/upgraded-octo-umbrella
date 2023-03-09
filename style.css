@@ -85,7 +85,6 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
 .left-section{
@@ -218,6 +217,8 @@ flex-direction: column;
 
 .card__img {
   width: 285px;
+  border-radius: 11px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 .card__logo {
@@ -261,4 +262,51 @@ flex-direction: column;
 .card__infos-name{
   letter-spacing: 0.1rem;
 
+}
+
+@media screen and (min-width:1140px) {
+  .container {
+    flex-direction: unset;
+  }
+
+  .left-section{
+  min-height: 100vh;
+  width: 40%;
+  }
+
+  .card__back {
+    transform: translate(176px, 225px);
+  }
+  .card__front {
+  transform: translate(100px, -312px);
+  border-radius: 1px;
+  }
+
+  .card__numbers{
+    bottom: 4.5rem;
+    left: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .card__infos{
+    left: 2rem;
+    font-size: 12px;
+    right: 2.9rem;
+    bottom: 1.8rem;
+  }
+
+  .card__logo{
+    left: 2rem;
+    width: 86px;
+  }
+  .card__infos-cvc {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+  /* cards */
+  .card__img {
+    width:445px;
+    border-radius: 11px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
 }
