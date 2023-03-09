@@ -6,8 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet"> 
   <title>Frontend Mentor | Interactive card details form</title>
 <link rel="stylesheet" href="style.css">
 
@@ -15,7 +15,55 @@
 <body>
   <div>
     <div class="container">
+      <div class="left-section">
+        <div class="cards">
+        <div class="card__front">
 
+          <img 
+          src="./images/card-logo.svg" 
+          alt="card-logo"
+          class="card__logo">
+          <div class="card__container">
+            <img 
+            src="./images/bg-card-front.png" 
+            alt="card-front"
+            class="card__img bg-card-front">
+  
+            <h1 id="numbers" class="card__numbers">
+              0000 0000 0000 0000
+            </h1>
+
+            <div class="card__infos">
+              <span id="name" class="card__infos-name">
+                Jane Appleseed
+              </span>
+              <span id="date" class="card__infos-date">
+                <span id="month" class="card__infos-month">
+                  00
+                </span>
+                <span>/</span>
+                <span id="year" class="card__infos-year">
+                  00
+                </span>
+              </span>
+            </div>
+
+
+          </div>
+        </div>
+        <div class="card__back">
+          <img 
+          src="./images/bg-card-back.png" 
+          alt="back-card"
+          class="card__img bg-card-back"
+          >
+          <span id="cvc" class="card__infos-cvc">
+            000
+          </span>
+
+        </div>
+        </div>
+      </div>
       <div class="right-section">
         <form class="card__form">
     
@@ -91,9 +139,7 @@
           </div>
         </form>
       </div>
-    
       </div>
-    
   </div>
 
 
