@@ -73,6 +73,8 @@
             class="card__form-input"
             type="text" 
             placeholder="e.g. Jane Appleseed" 
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            maxlength="25"
             id="cardName"
             required>
           </div>
@@ -82,6 +84,9 @@
             <input
             class="card__form-input"
             type="number" 
+            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            minlength="16"
+            maxlength="16"
             placeholder="e.g. 1234 5678 9123 0000" 
             id="cardNumber"
             required>
@@ -91,11 +96,14 @@
             <div class="card__form-expDate">
               <label class="card__form-label" for="Exp Date">  Exp. Date (MM/YY)</label>
               
-              <div class="flex-group">
+              <div id="flexGroup"class="flex-group">
                 <input 
                 class="card__form-input input-my"
                 type="number"
                 placeholder="MM" 
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="2"
+                maxlength="2"
                 id="mm"
                 required
                 >
@@ -103,6 +111,9 @@
                 <input 
                 class="card__form-input input-my"
                 type="number"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                minlength="2"
+                maxlength="2"
                 placeholder="YY" 
                 id="yy"
                 required
@@ -116,33 +127,31 @@
                 <input 
                 class="card__form-input input-cvc"
                 type="number"
+                oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                maxlength="3"
                 placeholder="e.g. 123" 
-                id="cvc"
+                id="cardCvc"
                 required
                 >
               </div>
       
           </div>
       
-          <button class="card__form-button" type="submit">
+          <button class="button" id="submit_button" type="submit">
             Confirm
           </button>
-      
-          <div class="visually-hidden">
-            <img src="./images/icon-complete.svg" alt="completed">
-            <h1>Thank you !</h1>
-            <p>  We've added your card details
-              <button>
-                Continue
-              </button>
-            </p>
-          </div>
         </form>
+        <div class="thank visually-hidden">
+          <img src="./images/icon-complete.svg" alt="Completed" />
+          <h1 class="thank__title">Thank you!</h1>
+          <p class="thank__text">We've added your card details</p>
+          <button  class="button thank__button">Continue</button>
+        </div>
       </div>
       </div>
   </div>
 
 
-
+<script src="script.js"></script>
 </body>
 </html>

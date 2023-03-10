@@ -77,10 +77,11 @@ body {
   font-size: var(--fs-body);
 }
 
-.visually-hidden {
-  display: none;
-}
 
+
+.visually-hidden{
+  display: none !important;
+}
 .container {
   display: flex;
   align-items: center;
@@ -128,6 +129,12 @@ body {
   margin-bottom: 0.35rem;
 }
 
+
+  input:focus {
+    outline: none !important;
+    border:1px solid var(--clr-neutral-900);
+  }
+
 .card__form-input {
   padding: .5rem .5rem .5rem .8rem;
   border: 1px solid var(--clr-neutral-300);
@@ -155,7 +162,7 @@ body {
   margin-left: 0 ;
 }
 
-.card__form-button {
+.button {
   display: flex;
   flex-direction: column;
   grid-column: 2 span;
@@ -170,6 +177,27 @@ body {
   border-radius: 0.5rem;
   padding: .75em 1.5em;
   height: 3.125rem;
+}
+
+.error {
+  border: 1px solid var(--clr-primary-600);
+}
+.error_message{
+  gap: 0;
+}
+.error_message::after{
+  content: "Can't be blank";
+  color: var(--clr-primary-600);
+  margin-top: 0.4rem;
+  font-size: 12px;
+
+}
+
+.error_message-numbersOnly::after{
+  content: "Wrong format, numbers only";
+  color: var(--clr-primary-600);
+  margin-top: 0.4rem;
+  font-size: 12px;
 }
 
 
@@ -192,7 +220,29 @@ flex-direction: column;
   width:100%;
 }
 
+/* THANK YOU */
 
+.thank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.thank__title{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: var(--fw-regular);
+  text-align: center;
+}
+.thank__text{
+  color: var(--clr-neutral-500);
+}
+
+.thank__button{
+  width: 120%;
+}
 /* cards */
 
 .cards {
@@ -246,6 +296,8 @@ flex-direction: column;
   font-weight: 400;
   letter-spacing: 2px;
 }
+
+
 
 .card__infos {
   position: absolute;
@@ -303,7 +355,7 @@ flex-direction: column;
     font-size: 15px;
     letter-spacing: 2px;
   }
-  /* cards */
+  
   .card__img {
     width:445px;
     border-radius: 11px;
